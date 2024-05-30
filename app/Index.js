@@ -5,10 +5,12 @@ import Player from './Screen/Player'
 import Playlist from './Screen/Playlist';
 import { MaterialIcons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { View ,StyleSheet } from 'react-native';
 
 const Tabs=createBottomTabNavigator()
 export default function index() {
   return (
+    <View style={styles.container}>
     <Tabs.Navigator >
         <Tabs.Screen name='Audiolist' component={Audiolist} options={{
             tabBarIcon:(color)=><MaterialIcons name="headset" size={30} color={color} />
@@ -20,5 +22,12 @@ export default function index() {
             tabBarIcon:(color)=><MaterialIcons name="library-music" size={30} color={color} />
         }}/>
     </Tabs.Navigator>
+    </View>
   )
 }
+
+const styles=StyleSheet.create({
+      container:{
+        flex:1
+      }
+})

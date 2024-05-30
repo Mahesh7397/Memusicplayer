@@ -1,29 +1,25 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React, { useEffect } from 'react'
+import { Text, View ,StyleSheet} from 'react-native'
+import React, { Component } from 'react'
 
-import * as MediaLibrary from 'expo-media-library'
-
-export default function Audiolist() {
-  //  getPermission=async()=>{
-  //      const permission=await MediaLibrary.getPermissionsAsync()
-  //      console.log(permission)
-  //  }
-//
-  //  useEffect(()=>{
-  //      getPermission()
-  //  },[])
-//
-  return (
-    <View style={styles.container}>
-      <Text>Audiolist</Text>
-    </View>
-  );
+export class Audiolist extends Component {
+  
+ 
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text>Audiolist</Text>
+      </View>
+    )
+  }
 }
 
+export default Audiolist
+
+
 const styles = StyleSheet.create({
-    container:{
-        flex:1,
-        justifyContent:'center',
-        alignItems:'center'
-    }
-})
+      container:{
+          flex:1,
+          justifyContent:'center',
+          alignItems:'center'
+      }
+  })
